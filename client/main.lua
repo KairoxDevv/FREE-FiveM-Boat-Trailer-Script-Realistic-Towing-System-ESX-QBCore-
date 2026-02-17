@@ -199,8 +199,8 @@ function UnloadBoat()
         return
     end
     
-    local trailerCoords = GetEntityCoords(towedTrailer or GetClosestVehicle(GetEntityCoords(PlayerPedId())))
-    local unloadCoords = GetOffsetFromEntityInWorldCoords(trailerCoords, 5.0, 0.0, 0.0)
+    local trailer = towedTrailer or GetClosestVehicle(GetEntityCoords(PlayerPedId()))
+    local unloadCoords = GetOffsetFromEntityInWorldCoords(trailer, 5.0, 0.0, 0.0)
     
     FreezeEntityPosition(loadedBoat, false)
     SetEntityCoords(loadedBoat, unloadCoords.x, unloadCoords.y, unloadCoords.z, false, false, false, false)
@@ -328,7 +328,7 @@ end)
 -- Key press handling (fallback if no target system)
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(0)
+        Citizen.Wait(200) -- Check every 200ms to reduce CPU usage
         
         if IsControlJustReleased(0, Config.AttachKey) then
             AttachTrailer()
