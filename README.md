@@ -165,6 +165,13 @@ The script includes server-side synchronization to ensure:
 
 This script is **FREE** and open source. Feel free to modify and use it on your server.
 
+## 📚 Documentation
+
+- **[INSTALL.md](INSTALL.md)** - Detailed installation guide with troubleshooting
+- **[DEVELOPER.md](DEVELOPER.md)** - Developer documentation for extending the script
+- **[CHANGELOG.md](CHANGELOG.md)** - Version history and planned features
+- **[config_examples.lua](config_examples.lua)** - Configuration examples for different setups
+
 ## 💡 Credits
 
 Created by **KairoxDev**
